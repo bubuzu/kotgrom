@@ -1,0 +1,40 @@
+﻿#fileSelector {
+   width: 269px;
+    height: 36px;
+    position:absolute;
+    opacity:0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+
+#files {
+    width: 269px;
+    height: 36px;
+    position:absolute;
+    cursor: pointer;
+    background-image: url('images/fromComp.jpg');
+    top: -3px;
+    left: -4px;
+}
+
+#FileUpload {
+    z-index: 30;
+    position: relative;
+    top: 195px;
+    left:73px;
+    width: 269px;
+    height: 36px;
+    display: block;
+    cursor: pointer;
+}
+
+#SocialFile {
+    z-index: 30;
+    position: relative;
+    top: 156px;
+    left:363px;
+    width: 269px;
+    height: 36px;
+    display: block;
+    cursor: pointer;
+}

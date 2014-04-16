@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="kotgrom" Class="KotDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=kotgrom;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="kotgromConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User" Id="ID1">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sessid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="vkid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="fbid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="cdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="token" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="admin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Advert" Member="Adverts">
+    <Type Name="Advert">
+      <Column Name="aid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="photos" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="cdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="closed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spAddUser" Method="spAddUser">
+    <Parameter Name="vkid" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="fbid" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="name" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="token" Type="System.String" DbType="NVarChar(256)" />
+    <ElementType Name="spAddUserResult">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sessid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="token" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetUser" Method="spGetUser">
+    <Parameter Name="sessid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="uid" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.spAddAdvert" Method="spAddAdvert">
+    <Parameter Name="uid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sessid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="phone" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="city" Type="System.String" DbType="NVarChar(128)" />
+    <Parameter Name="description" Type="System.String" DbType="NVarChar(128)" />
+    <Parameter Name="photos" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spGetCat" Method="spGetCat">
+    <Parameter Name="aid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetCatResult">
+      <Column Name="aid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="photos" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="cdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="closed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spUpdateAdvert" Method="spUpdateAdvert">
+    <Parameter Name="aid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="uid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sessid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="phone" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="city" Type="System.String" DbType="NVarChar(128)" />
+    <Parameter Name="description" Type="System.String" DbType="NVarChar(128)" />
+    <Parameter Name="photos" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="closed" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="deleted" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spGetCats" Method="spGetCats">
+    <Parameter Name="page" Type="System.Int32" DbType="Int" />
+    <Parameter Name="uid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="qtype" Type="System.String" DbType="NVarChar(15)" />
+    <ElementType Name="spGetCatsResult">
+      <Column Name="aid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="photos" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="cdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="closed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="position" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cats" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetCat2" Method="spGetCat2">
+    <Parameter Name="aid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetCat2Result">
+      <Column Name="aid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="photos" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="cdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="closed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

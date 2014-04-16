@@ -1,0 +1,636 @@
+﻿body {
+    margin: 0;
+    background-color: #4eb5e7;
+    font-family: 'plumbmedium';
+
+/*background: rgb(82,174,226);
+background: -moz-linear-gradient(top,  rgba(82,174,226,1) 0%, rgba(236,242,247,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(82,174,226,1)), color-stop(100%,rgba(236,242,247,1))); 
+background: -webkit-linear-gradient(top,  rgba(82,174,226,1) 0%,rgba(236,242,247,1) 100%); /
+background: -o-linear-gradient(top,  rgba(82,174,226,1) 0%,rgba(236,242,247,1) 100%); 
+background: -ms-linear-gradient(top,  rgba(82,174,226,1) 0%,rgba(236,242,247,1) 100%);
+background: linear-gradient(to bottom,  rgba(82,174,226,1) 0%,rgba(236,242,247,1) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', endColorstr='#ecf2f7',GradientType=0 ); */
+
+    background-image: url(images/gradient.jpg);
+    background-repeat: repeat-x;
+    background-position: top;
+
+
+}
+
+#Main {
+    width: 1299px;
+    height: 1980px;
+    background-image: url(images/bg3.jpg);
+    margin:auto;
+
+}
+
+
+#HowToGetButton {
+    width: 268px;
+    height: 138px;
+    position: relative;
+    left: 535px;
+    top: 431px;
+    cursor: pointer;
+    background-image: url('images/btnGet.png');
+}
+
+#HowToGiveButton {
+    width: 268px;
+    height: 138px;
+    position: relative;
+    left: 203px;
+    top: 293px;
+    cursor: pointer;
+    background-image: url('images/btnGive.png');
+}
+
+#GiveButton {
+    width: 291px;
+    height: 37px;
+    position: relative;
+    left: 210px;
+    top: 346px;
+    cursor: pointer;
+    font-family: 'plumbmedium';
+    text-decoration: underline;
+    font-size: 20pt;
+    color: #4eb5e7;
+}
+
+#CatCount {
+    color: #aab9c1;
+    font-family: 'plumbmedium';
+    font-size: 16pt;
+    position: relative;
+    top: 374px;
+    left: 505px;
+    text-align: center;
+    width: 308px;
+    height: 28px;
+}
+
+.GrayText {
+    font-size: 16pt;
+    color: #aab9c1;
+}
+
+.BlueText {
+    font-size: 20pt;
+    color: #4eb5e7;
+}
+
+#DarkPage {
+  position: absolute; 
+  z-index: 15;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 1980px;
+
+  background-color: #4e98c3;
+ filter:alpha(opacity=80); 
+  -moz-opacity:0.8;
+  -khtml-opacity: 0.8; 
+  opacity: 0.8;
+  display: none;
+}
+
+
+/*------Login --------*/
+#LoginDiv {
+    z-index: 50;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -199px;
+    margin-left: -380px;
+    width: 760px;
+    height: 398px;
+    background-image: url(images/popupLogin.png);
+    display: none;
+}
+
+#LoginClose {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: 681px;
+    cursor: pointer;
+    top: 17px;
+}
+
+#LoginButtons {
+    position: relative;
+    top: 129px;
+    left: 104px;
+    width: 542px;
+    height: 58px;
+}
+
+#VkLoginButton {
+    height: 58px;
+    width: 257px;
+    float: left;
+    margin-left: 30px;
+}
+
+#FbLoginButton {
+    height: 58px;
+    width: 254px;
+    float: left;
+}
+
+/*------ End --------*/
+
+/*------ADD cat --------*/
+
+#AddCatDiv {
+    z-index: 20;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -443px;
+    width: 841px;
+    height: 886px;
+    background-image: url(images/addbg2.png);
+    display: none;
+}
+
+#Photos {
+    position: relative;
+    width: 664px;
+    height: 472px;
+    top: 133px;
+    left: 104px;
+    color: red;
+    z-index: 31;
+}
+
+
+#CloseAddCat {
+    position: relative;
+    left: 755px;
+    top: 100px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#AddCatImageButton {
+    position: relative;
+    left: 104px;
+    top: 164px;
+    width: 280px;
+    height: 56px;
+    cursor: pointer;
+    background-image: url('images/btnAdd_h.png');
+    z-index: 40;
+}
+
+#AddCatImageButton.hover {
+    /*background-image: url(images/btnAdd_h.png);*/
+}
+
+#ReadyCatButton {
+    position: relative;
+    left: 396px;
+    top: 108px;
+    width: 187px;
+    height: 56px;
+    cursor: pointer;
+    background-image: url('images/btnReady_h.png');
+    z-index: 40;
+}
+
+#ReadyCatButton.disabled {
+    background-image: url(images/btnReady_disable.png);
+    cursor: pointer;
+}
+
+#ReadyCatButton.hover {
+    /*background-image: url(images/btnReady_h.png);*/
+}
+
+#EditsDiv {
+    position: absolute;
+    left: 103px;
+    top: 813px;
+    width: 666px;
+    height: 25px;
+    z-index: 40;
+    font-size: 10pt;
+    color: #96a4ab;
+}
+
+#ContactsText {
+    width: 160px;
+    float: left;
+    height: 100%;
+    color: #96a4ab;
+    padding-top: 0px;
+    font-size: 12pt;
+}
+
+#ContactsPhone {
+    width: 160px;
+    float: left;
+    height: 100%;
+    color: #70818d;
+    text-align: left;
+}
+
+#ContactsEmail {
+    width: 160px;
+    float: left;
+    height: 100%;
+    color: #70818d;
+    text-align: center;
+}
+
+#ContactsCity {
+    width: 160px;
+    float: left;
+    height: 100%;
+    color: #70818d;
+    text-align: right;
+}
+
+#txtCity {
+    width: 140px;
+}
+
+#txtEmail {
+    width: 140px;
+}
+
+#txtPhone {
+    width: 140px;
+}
+
+
+#DescriptionDiv {
+    position: absolute;
+    left: 106px;
+    top: 710px;
+    width: 666px;
+    height: 50px;
+    z-index: 40;
+    font-size: 12pt;
+    color: #96a4ab;
+}
+
+#DescriptionText {
+    width: 150px;
+    height: 100%;
+    float: left;
+    color: #96a4ab;
+}
+
+#DescriptionValue {
+    width: 480px;
+    height: 100%;
+    float: left;
+    color: #70818d;
+    overflow: auto;
+}
+
+#txtDescription {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+#WindowHeader {
+    position: absolute;
+    top: 115px;
+    width: 300px;
+    height: 22px;
+    left: 106px;
+    color: #75bee7;
+    font-size: 20pt;
+}
+
+#cbGave {
+    position: absolute;
+    top: 636px;
+    width: 174px;
+    height: 16px;
+    left: 399px;
+    background-image: url('images/cbFindInactive.png');
+    cursor: pointer;
+    display: none;
+}
+
+#cbGave.selected {
+    background-image: url('images/cbFindActive.png');
+}
+
+/*------ End --------*/
+
+
+/*------View cat --------*/
+
+#ViewCatDiv {
+    z-index: 20;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -450px;
+    margin-left: -443px;
+    width: 841px;
+    height: 886px;
+    background-image: url(images/addbg2.png);
+    display: none;
+}
+/*------ End --------*/
+
+/*------FilesLoad --------*/
+#FilesLoadPopup {
+    z-index: 29;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -184px;
+    margin-left: -352px;
+    width: 705px;
+    height: 367px;
+    background-image: url(images/loadPhoto.png);
+    display: none;
+}
+
+#FilesPopupClose {
+    z-index: 30;
+    position: relative;
+    width: 29px;
+    height: 32px;
+    cursor: pointer;
+    top: -56px;
+    left: 655px;
+}
+/*------ End --------*/
+
+/*------HowTo --------*/
+#HowTo {
+    position: relative;
+    width: 614px;
+     height: 218px;
+    top: 313px;
+    left: 204px;
+}
+
+#HowToGet {
+    width: 614px;
+    height: 218px;
+}
+
+#HowToLive {
+    width: 614px;
+    height: 218px;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    line-height: 32px;
+    width: 37px;
+    height: 32px;
+    border: 1px solid #70818d;
+    color: #70818d;
+    text-align: center;
+    font: 17pt Arial, sans-serif;
+
+    padding-top:5px;
+}
+
+.howtoget {
+    color: #70818d;
+}
+
+.howtoget tr {
+    height: 50px;
+}
+
+.howtoget .column2 {
+    text-align: center;
+    width: 50px;
+}
+
+.howtoget .column3 {
+    font-size: 15pt;
+}
+.howtoget .column0 {
+    font-size: 25pt;
+    padding-bottom: 5px;
+}
+
+/*------ End --------*/
+
+/*------FilesLoad --------*/
+#SocialLoadPopup {
+    z-index: 29;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -380px;
+    margin-top: -198px;
+    width: 760px;
+    height: 398px;
+    background-image: url(images/socialphoto.png);
+    display: none;
+}
+
+#SocialPopupClose {
+    z-index: 30;
+    position: relative;
+    width: 29px;
+    height: 32px;
+    cursor: pointer;
+    top: 16px;
+    left: 682px;
+}
+
+#SocialPopupSlider {
+    z-index: 30;
+    position: relative;
+    width: 640px;
+    height: 150px;
+    top: 74px;
+    left: 61px;
+}
+
+#SocialPopupOk {
+    z-index: 30;
+    position: relative;
+    width: 165px;
+    height: 51px;
+    top: 97px;
+    left: 91px;
+    cursor: pointer;
+    background-image: url('images/btnAddSocial.png');
+}
+
+#btnSocialLeft {
+    width: 32px;
+    height: 150px;
+    float: left;
+    cursor: pointer;
+    background-image: url(images/leftsmall.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#btnSocialRight {
+    width: 32px;
+    height: 150px;
+    float: left;
+    cursor: pointer;
+    background-image: url(images/rightsmall.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#SocialImages {
+    width: 560px;
+    height: 150px;
+    float: left;
+}
+
+.SocialImage {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 130px;
+    height: 130px;
+    margin: 5px;
+    float: left;
+    background-image: url('');
+}
+.SocialImage.selected {
+    -webkit-box-shadow: 0px 0px 3px 3px #4eb5e7;
+    -moz-box-shadow: 0px 0px 3px 3px #4eb5e7;
+    box-shadow: 0px 0px 3px 3px #4eb5e7; 
+}
+
+
+/*------ End --------*/
+
+/*------Gallery --------*/
+#Gallery {
+    position: relative;
+    top: 475px;
+    left: 315px;
+    width: 650px;
+    height: 640px;
+}
+
+div.galleryitem {
+    width: 200px;
+    height: 200px;
+    margin: 7px;
+    float: left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    -webkit-box-shadow: 0px 0px 3px 3px #4eb5e7;
+    -moz-box-shadow: 0px 0px 3px 3px #4eb5e7;
+    box-shadow: 0px 0px 3px 3px #4eb5e7;
+    cursor: pointer;
+
+}  
+
+#Pager {
+    width: 402px;
+    height: 20px;
+    position: relative;
+    top: 483px;
+    left: 435px;
+    text-align: center;
+}
+
+#PagerChild {
+    display: inline-block;
+}
+
+div.PagerNum {
+    width: 40px;
+    height: 20px;
+    float: left;
+}
+
+div.PagerNum.selected {
+    background-color: #da7533;
+}
+
+#GalleryFilter {
+    position: relative;
+    width: 342px;
+    height: 30px;
+    left: 600px;
+    top: 467px;
+}
+
+div.filterItem {
+    width: 100px;
+    float: right;
+    color: #70818d;
+    text-decoration: underline;
+    text-align: right;
+    cursor: pointer;
+    font-family: 'plumbmedium';
+    font-size: 13pt;
+}
+
+div.filterItem.selected {
+    color: #d27133;
+}
+
+/*------ End --------*/
+
+/*#CatText {
+    color: #aab9c1;
+}*/
+
+.Shadowed {
+    -webkit-box-shadow: 0px 0px 3px 5px #4eb5e7;
+    -moz-box-shadow: 0px 0px 3px 5px #4eb5e7;
+    box-shadow: 0px 0px 3px 5px #4eb5e7; 
+}
+
+.ShadowedLight {
+    -webkit-box-shadow: 0px 0px 3px 5px #aadef7;
+    -moz-box-shadow: 0px 0px 3px 5px #aadef7;
+    box-shadow: 0px 0px 3px 5px #aadef7 
+}
+
+.ShadowedWhite {
+    -webkit-box-shadow: 0px 0px 2px 3px #e5f8ff;
+    -moz-box-shadow: 0px 0px 2px 5px #e5f8ff;
+    box-shadow: 0px 0px 2px 5px #e5f8ff; 
+}
+
+
+/*------ Links to site--------*/
+#top_link {
+	height: 100px;
+	width: 260px;
+	display: block;
+	margin-left: 200px;
+	position: absolute;
+	margin-top: 60px;
+}
+
+#bottom_link {
+	height: 100px;
+	width: 370px;
+	display: block;
+	position: absolute;
+	margin-top: 1860px;
+	margin-left: 470px;
+}

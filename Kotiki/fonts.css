@@ -1,0 +1,31 @@
+/*
+@font-face {
+    font-family: 'plumbbold';
+    src: url('../fonts/plumb-bold-webfont.eot');
+    src: url('../fonts/plumb-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/plumb-bold-webfont.woff') format('woff'),
+         url('../fonts/plumb-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+@font-face {
+    font-family: 'plumbmedium';
+    src: url('fonts/plumb-medium-webfont.eot');
+    src: url('fonts/plumb-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/plumb-medium-webfont.woff') format('woff'),
+         url('fonts/plumb-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'plumblight';
+    src: url('fonts/plumb-light-webfont.eot');
+    src: url('fonts/plumb-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/plumb-light-webfont.woff') format('woff'),
+         url('fonts/plumb-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Kot">
+  <DataContextMoniker Name="/KotDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5647d219-d5f9-4251-86a0-31d936532523" absoluteBounds="3.75, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/KotDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1ece264-6742-426a-840a-93baa451b880" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="33a4f7c7-79fe-49ee-a747-0e6046c7745e" absoluteBounds="0.875, 1, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/KotDataContext/Advert" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2d4d68f-1864-4959-a9ea-e1a1defe05d1" absoluteBounds="0.89, 1.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
