@@ -73,6 +73,7 @@
     <Content Include="images\gradient.jpg" />
     <Content Include="images\kotavdom.png" />
     <Content Include="images\sharebutton.png" />
+    <Content Include="images\logo.jpg" />
     <Content Include="js\paginator.js" />
     <Content Include="pager.css" />
     <Content Include="slider2.css" />

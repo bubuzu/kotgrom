@@ -5,6 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Взять кота. Кот Гром и заколдованный дом.</title>
+    
+    <meta property="og:title" content="Взять кота. Кот Гром и заколдованный дом." />
+    <meta property="og:image" content="http://kotavdom.ru/images/logo.jpg" />
+    <meta property="og:description" content="Помогите найти котику свой дом." />
+    
+    <meta name="title" content="Взять кота. Кот Гром и заколдованный дом." />
+    <meta name="description" content="Помогите найти котику свой дом." />
+    <link rel="image_src" href="http://kotavdom.ru/images/logo.jpg" />
+
     <link href="main.css" rel="stylesheet"/>
     <link href="fileupload.css" rel="stylesheet" />
     <link href="slider2.css" rel="stylesheet" />
