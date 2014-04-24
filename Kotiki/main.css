@@ -29,21 +29,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
 
 
 #HowToGetButton {
-    width: 268px;
-    height: 138px;
+    width: 296px;
+    height: 173px;
     position: relative;
-    left: 535px;
-    top: 431px;
+    left: 489px;
+    top: 429px;
     cursor: pointer;
     background-image: url('images/btnGet.png');
 }
 
 #HowToGiveButton {
-    width: 268px;
-    height: 138px;
+    width: 296px;
+    height: 173px;
     position: relative;
-    left: 203px;
-    top: 293px;
+    left: 193px;
+    top: 255px;
     cursor: pointer;
     background-image: url('images/btnGive.png');
 }
@@ -53,7 +53,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
     height: 37px;
     position: relative;
     left: 210px;
-    top: 346px;
+    top: 286px;
     cursor: pointer;
     font-family: 'plumbmedium';
     text-decoration: underline;
@@ -66,7 +66,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
     font-family: 'plumbmedium';
     font-size: 16pt;
     position: relative;
-    top: 374px;
+    top: 314px;
     left: 505px;
     text-align: center;
     width: 308px;
@@ -278,7 +278,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
     left: 106px;
     top: 710px;
     width: 666px;
-    height: 50px;
+    height: 55px;
     z-index: 40;
     font-size: 12pt;
     color: #96a4ab;
@@ -378,8 +378,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
 #HowTo {
     position: relative;
     width: 614px;
-     height: 218px;
-    top: 313px;
+    height: 218px;
+    top: 266px;
     left: 204px;
 }
 
@@ -522,7 +522,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
 /*------Gallery --------*/
 #Gallery {
     position: relative;
-    top: 475px;
+    top: 415px;
     left: 315px;
     width: 650px;
     height: 640px;
@@ -549,7 +549,7 @@ div.galleryitem {
     width: 402px;
     height: 20px;
     position: relative;
-    top: 483px;
+    top: 423px;
     left: 435px;
     text-align: center;
 }
@@ -573,7 +573,7 @@ div.PagerNum.selected {
     width: 342px;
     height: 30px;
     left: 600px;
-    top: 467px;
+    top: 407px;
 }
 
 div.filterItem {

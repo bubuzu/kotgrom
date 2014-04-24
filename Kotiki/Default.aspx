@@ -91,7 +91,7 @@
                   <td class="column3">Выберите самую очаровательную по Вашему мнению мордочку на нашем сайте</td>
               </tr>
               <tr>
-                  <td class="column2"><div class="numberCircle">3</div></td>
+                  <td class="column2"><div class="numberCircle">2</div></td>
                   <td class="column3">Кликните по фотографии и узнайте контакты, по которым можно связаться и забрать пушистого питомца</td>
               </tr>
           </table>

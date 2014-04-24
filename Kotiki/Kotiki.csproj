@@ -68,6 +68,10 @@
     <Content Include="favicon.ico" />
     <Content Include="images\bg2.jpg" />
     <Content Include="images\bg3.jpg" />
+    <Content Include="images\btnGet.png" />
+    <Content Include="images\btnGet_disabled.png" />
+    <Content Include="images\btnGive.png" />
+    <Content Include="images\btnGive_disabled.png" />
     <Content Include="images\cbFindActive.png" />
     <Content Include="images\cbFindInactive.png" />
     <Content Include="images\gradient.jpg" />
@@ -86,10 +90,6 @@
     <Content Include="images\btnAdd.png" />
     <Content Include="images\btnAddSocial.png" />
     <Content Include="images\btnAdd_h.png" />
-    <Content Include="images\btnGet_disabled.png" />
-    <Content Include="images\btnGet.png" />
-    <Content Include="images\btnGive_disabled.png" />
-    <Content Include="images\btnGive.png" />
     <Content Include="images\btnReady.png" />
     <Content Include="images\btnReady_disabled.png" />
     <Content Include="images\btnReady_h.png" />

@@ -322,28 +322,38 @@ function getpage(padeid, qtype) {
         if (!PagerInited) {
             InitPager(TotalItems);
         } else {
-            $('#PagerChild').bootstrapPaginator({ totalPages: TotalItems / 9 + 1 });
+            var totp = TotalItems / 9 + 1;
+            if (TotalItems % 9 == 0) {
+                totp = TotalItems / 9;
+            }
+
+            $('#PagerChild').bootstrapPaginator({ totalPages: totp });
         }
     });
 }
 
 function InitPager(total) {
+
+    var totpages = total / 9 + 1;
+    if (total % 9 == 0) {
+        totpages = total / 9;
+    }
     $('#PagerChild').bootstrapPaginator({
-        totalPages: total / 9 + 1,
+        totalPages: totpages,
         currentPage: 1,
-        onPageClicked: function(e, originalEvent, type, page) {
-            $(this).bootstrapPaginator({ totalPages: TotalItems / 9 + 1 });
+        onPageClicked: function (e, originalEvent, type, page) {
+            
+            var totp = TotalItems / 9 + 1;
+            if (TotalItems % 9 == 0) {
+                totp = TotalItems / 9;
+            }
+
+            $(this).bootstrapPaginator({
+                totalPages: totp
+            });
             getpage(page);
         }
     });
-
-    
-    //var options = {
-    //    currentPage: 3,
-    //    totalPages: 10,
-    //    onPageClicked: function(e,originalEvent,type,page){
-    //        $('#alert-content').text("Page item clicked, type: "+type+" page: "+page);
-    //    }
 
     PagerInited = true;
 }
