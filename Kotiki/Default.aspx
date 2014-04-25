@@ -38,6 +38,7 @@
         var socialtype = <%=SocialType%>;
         var startAid = <%=Aid%>;
     </script>
+    <script type="text/javascript" src="https://vk.com/js/api/share.js?90" charset="windows-1251"></script>
 </head>
 <body>
    <script>
@@ -199,6 +200,20 @@
         </div> 
      </div>   
       
+    <div id="SocialShare">
+        <div id="VkShare">
+          <script type="text/javascript">
+            document.write(VK.Share.button(false,{type: "round", text: "Сохранить"}));
+           </script>
+        </div>
+        <div id="FbShare">
+            <div class="fb-share-button" data-href="http://kotavdom.ru/" data-type="button_count"></div>
+        </div>
+        <div id="TwShare">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ru">Твитнуть</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+    </div>
      
     </form>
         <script type="text/javascript">

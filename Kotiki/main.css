@@ -593,6 +593,35 @@ div.filterItem.selected {
 
 /*------ End --------*/
 
+/*------- Social ------------*/
+
+#SocialShare {
+    position: relative;
+    top: 507px;
+    left: 485px;
+    width: 340px;
+    height: 25px;
+    text-align: center;
+}
+
+#VkShare {
+    float: left;
+    width: 110px;
+
+}
+
+#FbShare {
+    float: left;
+     width: 120px;
+}
+
+#TwShare {
+    float: left;
+    width: 110px;
+}
+
+/*----------End ------------*/
+
 /*#CatText {
     color: #aab9c1;
 }*/
