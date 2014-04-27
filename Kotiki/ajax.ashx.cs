@@ -92,6 +92,15 @@ namespace Kotiki
                         }
                         break;
                     }
+                case "deleteadvert":
+                    {
+                        using (var db = new KotDataContext())
+                        {
+                            db.spDeleteAdvert(Convert.ToInt32(context.Request.Params["advid"]), Guid.Parse(context.Request.Params["sessid"]));
+                            context.Response.Write(jsonSerializer.Serialize(new { result = true }));
+                        }
+                        break;
+                    }
                 case "loadfromweb":
                     {
                         const string path = "captured/orig";

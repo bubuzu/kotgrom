@@ -116,4 +116,9 @@
       <Column Name="name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.spDeleteAdvert" Method="spDeleteAdvert">
+    <Parameter Name="aid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sessid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

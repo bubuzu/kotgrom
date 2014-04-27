@@ -94,6 +94,10 @@ function ShowEditDiv(aid,photos, phone, email, city, description, closed) {
 
     $("#cbGave").show();
     ChangeCbGave(closed);
+    
+    if (isAdmin == true) {
+        $("#btnDelete").show();
+    }
 
     Images = photos;
     $("#ShareButton").show();
@@ -118,6 +122,7 @@ function ShowEditDiv(aid,photos, phone, email, city, description, closed) {
     ga('send', 'event', 'edit', 'EditCat');
 }
 
+
 function SetEditMode() {
     var top = $(document).scrollTop();
     $("#AddCatDiv").css("top", top);
@@ -135,6 +140,12 @@ function SetEditMode() {
     $("#ReadyCatButton").show();
 
     InitEvents();
+}
+
+function DeleteAdvert(sessid) {
+    $.post("ajax.ashx", { m: "deleteadvert", advid: AdvertId, sessid: sessid }, function (r) {
+        CloseAddDiv();
+    });
 }
 
 function CbFindClick() {
@@ -272,7 +283,7 @@ function getpage(padeid, qtype) {
             var backImage = "captured/big/" + imarr[0];
 
             //ShowEditDiv(photos, phone, email, city, description)
-            if (isAdmin || uid == response[i].uid) {
+            if (isAdmin == true || uid == response[i].uid) {
 
                 var params = response[i].aid + ",'" + response[i].photos + "','" + response[i].phone + "','" + response[i].email + "','" + response[i].city + "','" + encodeURI(response[i].description) + "',"+response[i].closed;
 

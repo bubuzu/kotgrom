@@ -166,6 +166,8 @@
          
          <div id="WindowHeader">Пристроить кота</div>
          <div id="cbGave"  onclick="CbFindClick();"></div>
+         
+         <div id="btnDelete" onclick="DeleteAdvert(sessid);">Удалить</div>
      </div>
         
      <div id="FilesLoadPopup">

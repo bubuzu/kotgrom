@@ -60,7 +60,7 @@ namespace Kotiki
             {
                 if (m_User != null && m_User.admin != null)
                 {
-                    m_User.admin.ToString().ToLower();
+                    return m_User.admin.ToString().ToLower();
                 }
                 return false.ToString().ToLower();
             }
