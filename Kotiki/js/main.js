@@ -167,8 +167,12 @@ function CloseAddDiv() {
 }
 
 function ShowHowToGet() {
-    SetButtonEnabled(true, $('#HowToGiveButton'), "btnGive");
-    SetButtonEnabled(false, $('#HowToGetButton'), "btnGet");
+    //SetButtonEnabled(true, $('#HowToGiveButton'), "btnGive");
+    //SetButtonEnabled(false, $('#HowToGetButton'), "btnGet");
+
+    $('#HowToGetButton2').css('cursor', 'default');
+    $('#HowToGiveButton2').css('cursor', 'pointer');
+    $('#HowToGiveGetButton').css("background-image", "url(images/btnGetGive2.png)");
 
     $('#HowToLive').fadeTo('fast', 0.3, function() {
         $("#HowToGet").fadeTo('fast', 1);
@@ -177,8 +181,12 @@ function ShowHowToGet() {
 
 function ShowHowToLive() {
     
-    SetButtonEnabled(false, $('#HowToGiveButton'), "btnGive");
-    SetButtonEnabled(true, $('#HowToGetButton'), "btnGet");
+    //SetButtonEnabled(false, $('#HowToGiveButton'), "btnGive");
+    //SetButtonEnabled(true, $('#HowToGetButton'), "btnGet");
+
+    $('#HowToGetButton2').css('cursor', 'pointer');
+    $('#HowToGiveButton2').css('cursor', 'default');
+    $('#HowToGiveGetButton').css("background-image", "url(images/btnGetGive.png)");
 
     $('#HowToGet').fadeTo('fast', 0.3, function () {
         $("#HowToLive").fadeTo('fast', 1);

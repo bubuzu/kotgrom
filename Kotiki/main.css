@@ -12,7 +12,7 @@ background: -ms-linear-gradient(top,  rgba(82,174,226,1) 0%,rgba(236,242,247,1) 
 background: linear-gradient(to bottom,  rgba(82,174,226,1) 0%,rgba(236,242,247,1) 100%); 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', endColorstr='#ecf2f7',GradientType=0 ); */
 
-    background-image: url(images/gradient.jpg);
+    background-image: url(images/vertline.jpg);
     background-repeat: repeat-x;
     background-position: top;
 
@@ -21,8 +21,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
 
 #Main {
     width: 1299px;
-    height: 1980px;
-    background-image: url(images/bg3.jpg);
+    height: 2397px;
+    background-image: url(images/bg6.jpg);
     margin:auto;
 
 }
@@ -33,7 +33,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
     height: 173px;
     position: relative;
     left: 489px;
-    top: 429px;
+    top: 839px;
     cursor: pointer;
     background-image: url('images/btnGet.png');
 }
@@ -43,22 +43,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
     height: 173px;
     position: relative;
     left: 193px;
-    top: 255px;
+    top: 665px;
     cursor: pointer;
     background-image: url('images/btnGive.png');
 }
 
-#GiveButton {
-    width: 291px;
-    height: 37px;
+#HowToGiveGetButton {
+    width: 896px;
+    height: 100px;
     position: relative;
-    left: 210px;
-    top: 286px;
+    left: 190px;
+    top: 882px;
+    background-image: url('images/btnGetGive.png');
+}
+
+#HowToGetButton2 {
+    width: 447px;
+    height: 100%;
+    float: left;
     cursor: pointer;
-    font-family: 'plumbmedium';
+}
+
+#HowToGiveButton2 {
+    width: 447px;
+    height: 100%;
+    float: left;
+}
+
+#GiveButton {
+    width: 482px;
+    height: 100px;
+    position: relative;
+    left: 398px;
+    top: 877px;
+    cursor: pointer;
+    /*font-family: 'plumbmedium';
     text-decoration: underline;
     font-size: 20pt;
-    color: #4eb5e7;
+    color: #4eb5e7;*/
+    background-image: url('images/btnCreate.png');
+}
+
+#GiveButton .hover {
+    background-image: url(images/btnCreate_h.png);
 }
 
 #CatCount {
@@ -66,8 +93,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
     font-family: 'plumbmedium';
     font-size: 16pt;
     position: relative;
-    top: 314px;
-    left: 505px;
+    top: 1031px;
+    left: 483px;
     text-align: center;
     width: 308px;
     height: 28px;
@@ -390,10 +417,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
 /*------HowTo --------*/
 #HowTo {
     position: relative;
-    width: 614px;
+    width: 907px;
     height: 218px;
-    top: 266px;
-    left: 204px;
+    top: 896px;
+    left: 184px;
 }
 
 #HowToGet {
@@ -535,8 +562,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
 /*------Gallery --------*/
 #Gallery {
     position: relative;
-    top: 415px;
-    left: 315px;
+    top: 991px;
+    left: 313px;
     width: 650px;
     height: 640px;
 }
@@ -562,7 +589,7 @@ div.galleryitem {
     width: 402px;
     height: 20px;
     position: relative;
-    top: 423px;
+    top: 981px;
     left: 435px;
     text-align: center;
 }
@@ -585,8 +612,8 @@ div.PagerNum.selected {
     position: relative;
     width: 342px;
     height: 30px;
-    left: 600px;
-    top: 407px;
+    left: 598px;
+    top: 982px;
 }
 
 div.filterItem {
@@ -610,7 +637,7 @@ div.filterItem.selected {
 
 #SocialShare {
     position: relative;
-    top: 507px;
+    top: 1055px;
     left: 485px;
     width: 340px;
     height: 25px;
@@ -675,4 +702,6 @@ div.filterItem.selected {
 	position: absolute;
 	margin-top: 1860px;
 	margin-left: 470px;
+    top: 431px;
+    left: 140px;
 }

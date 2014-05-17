@@ -79,10 +79,15 @@
     <div id="Main">
         <a id="top_link" href="http://www.kotgrom.ru" target="_blank"></a>
     	<a id="bottom_link" href="http://www.kotgrom.ru" target="_blank"></a>
-        <div id="HowToGetButton" onclick="ShowHowToGet();"></div>
-        <div id="HowToGiveButton"  onclick="ShowHowToLive();"></div>
+        <%--<div id="HowToGetButton" onclick="ShowHowToGet();"></div>
+        <div id="HowToGiveButton"  onclick="ShowHowToLive();"></div>--%>
+        
+        <div id="HowToGiveGetButton">
+            <div id="HowToGiveButton2" onclick="ShowHowToLive();" ></div>
+            <div id="HowToGetButton2" onclick="ShowHowToGet();"></div>
+        </div>
         <div id="HowTo">
-          <div id="HowToGet"   style="display: none">
+          <div id="HowToGet" style="display: none">
           <table style="width: 100%;" class="howtoget">
               <tr>
                   <td colspan="3" class="column0">Как взять котенка домой?<br/><br/><span style="font-size: 16pt; height: 20px;">Взять котенка домой может любой желающий. Для этого:</span></td>
@@ -99,7 +104,7 @@
       </div>
         
       <div id="HowToLive">
-          <table style="width: 100%; height: 211px;" class="howtoget">
+          <%--<table style="width: 100%; height: 211px;" class="howtoget">
               <tr>
                   <td colspan="3" class="column0">Как пристроить котенка?</td>
               </tr>
@@ -115,13 +120,15 @@
                   <td class="column2"><div class="numberCircle">3</div></td>
                   <td class="column3">Как только найдутся добрые хозяева, Вы узнаете об этом первым. Просто передайте котика им и порадуйтесь за него.</td>
               </tr>
-          </table>
+          </table>--%>
+          <img src="images/howtoget.png"/>
       </div>
         </div>
 
     <div id="CatCount"></div>
-    <div id="GiveButton" onclick="ShowLogin(uid);"/>Создать объявление
-    </div>
+    <div id="GiveButton" onclick="ShowLogin(uid);" 
+        onmouseover="$(this).css('background-image','url(images/btnCreate_h.png)')"
+        onmouseout="$(this).css('background-image','url(images/btnCreate.png)')"/></div>
         
      <div id="LoginDiv">
                <div id="LoginClose" onclick="HideLogin();"></div>
@@ -227,7 +234,7 @@
             });
 
             getpage(1);
-            ShowHowToGet();
+            //ShowHowToGet();
             InitEvents();
         
             if (startAid != undefined) {

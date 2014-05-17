@@ -85,10 +85,17 @@ namespace Kotiki
 
                 case "showadvert":
                     {
-                        using (var db = new KotDataContext())
+                        try
                         {
-                            var data = db.spGetCat2(Convert.ToInt32(context.Request.Params["advid"])).First();
-                            context.Response.Write(jsonSerializer.Serialize(data));
+                            using (var db = new KotDataContext())
+                            {
+                                var data = db.spGetCat2(Convert.ToInt32(context.Request.Params["advid"])).First();
+                                context.Response.Write(jsonSerializer.Serialize(data));
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            context.Response.Write(jsonSerializer.Serialize(new { result = ex.ToString() }));
                         }
                         break;
                     }
