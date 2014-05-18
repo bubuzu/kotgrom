@@ -125,7 +125,19 @@
       </div>
         </div>
 
-    <div id="CatCount"></div>
+    <div id="CatCount">
+        <table style="width: 100%;">
+              <tr>
+                  <td>УЖЕ ВЗЯЛИ</td>
+              </tr>
+              <tr>
+                  <td class="Catcounter">00000</td>
+              </tr>
+              <tr>
+                  <td>КОТОВ</td>
+              </tr>
+          </table>
+    </div>
     <div id="GiveButton" onclick="ShowLogin(uid);" 
         onmouseover="$(this).css('background-image','url(images/btnCreate_h.png)')"
         onmouseout="$(this).css('background-image','url(images/btnCreate.png)')"/></div>

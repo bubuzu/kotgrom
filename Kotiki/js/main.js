@@ -335,7 +335,12 @@ function getpage(padeid, qtype) {
         
         if (response.length > 0) {
             var cats = declOfNum(catnum, ['КОТА', 'КОТА', 'КОТОВ']);
-            $("#CatCount").html('УЖЕ ВЗЯЛИ <span class="BlueText">' + catnum + '</span> ' + cats);
+            //$("#CatCount").html('УЖЕ ВЗЯЛИ <span class="BlueText">' + catnum + '</span> ' + cats);
+            
+            var htm = "<table style='width: 100%;'>" +
+                "<tr><td>УЖЕ ВЗЯЛИ</td></tr><tr><td class='Catcounter'>" + pad(catnum,5) + "</td></tr>" +
+                "<tr><td>" + cats + "</td></tr></table>";
+            $("#CatCount").html(htm);
         }
        
         if (!PagerInited) {

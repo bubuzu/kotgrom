@@ -91,13 +91,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52aee2', end
 #CatCount {
     color: #aab9c1;
     font-family: 'plumbmedium';
-    font-size: 16pt;
+    font-size: 12pt;
     position: relative;
-    top: 1031px;
-    left: 483px;
+    top: 1000px;
+    left: 543px;
     text-align: center;
-    width: 308px;
+    width: 182px;
     height: 28px;
+}
+
+.Catcounter {
+    background-image: url(images/counterback.png);
+    height: 32px;
+    font-size: 14pt;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding-left: 26px;
+    letter-spacing: 26px
 }
 
 .GrayText {
